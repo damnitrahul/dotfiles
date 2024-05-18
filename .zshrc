@@ -120,16 +120,6 @@ alias gpo="git push origin head && open raycast://confetti"
 alias gph="git push gitlab head"
 alias gch="git checkout"
 
-alias rails-start="rails s -b 0.0.0.0 -p 4000"
-alias helm-source="source .venv/bin/activate"
-# alias helm-start="python manage.py runserver 0.0.0.0:8000 --verbosity 0"
-alias helm-docker-start="docker compose -f ./docker/development/docker-compose-web.yml -f ./docker/development/docker-compose-db.yml up -d --build"
-alias helm-start='(
-  source .venv/bin/activate
-  docker compose -f ./docker/development/docker-compose-web.yml -f ./docker/development/docker-compose-db.yml up -d --build
-  cd ./undercroft
-  python manage.py runserver 0.0.0.0:8000 --verbosity 0
-)'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -146,9 +136,6 @@ eval "$(rbenv init -)"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-# procol-backend
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # Define your folder paths
 MAIN_FOLDER="/Users/rahul/documents/work/Speechify/site"
